@@ -341,7 +341,6 @@ html[lang="en"] .svc p{letter-spacing:.01em}
   position:relative;isolation:isolate;
   display:grid;grid-template-columns:130px 1fr 190px auto;align-items:center;gap:28px;
   padding:5vh 2vw;border-top:1px solid var(--line);
-  transition:padding-left .5s var(--ease);
 }
 .press-item:last-child{border-bottom:1px solid var(--line)}
 .press-item::before{
@@ -350,7 +349,8 @@ html[lang="en"] .svc p{letter-spacing:.01em}
   opacity:0;transition:opacity .5s var(--ease);
 }
 .press-item:hover::before{opacity:1}
-.press-item:hover{padding-left:3.2vw}
+.press-item>*{transition:transform .5s var(--ease);will-change:transform}
+.press-item:hover>*{transform:translateX(28px)}
 .press-item time{
   font-family:var(--serif);font-style:italic;font-size:14px;color:var(--muted);
   letter-spacing:.04em;white-space:nowrap;
@@ -369,10 +369,10 @@ html[lang="en"] .press-item h3{letter-spacing:.01em}
 .press-item .go{
   font-size:13px;color:var(--muted);transition:transform .5s var(--ease),color .3s;
 }
-.press-item:hover .go{transform:translateX(6px);color:var(--accent-deep)}
+.press-item:hover .go{transform:translateX(34px);color:var(--accent-deep)}
 @media(max-width:760px){
   .press-item{grid-template-columns:1fr;gap:14px;padding:4.5vh 0}
-  .press-item:hover{padding-left:0}
+  .press-item:hover>*{transform:none}
   .press-item .go{display:none}
   .press-item .p-thumb{order:-1;width:100%}
 }
