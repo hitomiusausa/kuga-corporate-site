@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | くうが株式会社</title>
+<meta name="description" content="くうが株式会社へのお問い合わせフォーム。お仕事のご相談・お見積り・取材依頼など、お気軽にどうぞ。">
+<link rel="alternate" hreflang="ja" href="https://kugainc.com/contact.html">
+<link rel="alternate" hreflang="en" href="https://kugainc.com/en/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://kugainc.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Sans+JP:wght@200;300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><img src="assets/img/kuga.png" alt="くうが株式会社 ロゴ">KUGA<span class="dot">.</span></a>
+  <ul>
+    <li><a href="index.html#about">ABOUT</a></li>
+    <li><a href="index.html#services">SERVICES</a></li>
+    <li><a href="works.html">WORKS</a></li>
+    <li><a href="press.html">PRESS</a></li>
+    <li><a class="active" href="contact.html">CONTACT</a></li>
+  </ul>
+  <div class="lang"><a class="cur" href="contact.html" aria-current="true">JP</a><span class="sep">/</span><a href="en/contact.html">EN</a></div>
+  <button class="menu-btn" aria-label="メニュー" aria-expanded="false"><span></span><span></span></button>
+</nav>
+<div class="m-menu">
+  <a class="mm-link" href="index.html#about"><span class="idx">01</span>About</a>
+  <a class="mm-link" href="index.html#services"><span class="idx">02</span>Services</a>
+  <a class="mm-link" href="works.html"><span class="idx">03</span>Works</a>
+  <a class="mm-link" href="press.html"><span class="idx">04</span>Press</a>
+  <a class="mm-link" href="contact.html"><span class="idx">05</span>Contact</a>
+  <div class="mm-lang"><a class="cur" href="contact.html">JAPANESE</a><a href="en/contact.html">ENGLISH</a></div>
+</div>
+
+<header class="page-hero">
+  <div class="orb a" data-p="0.05"></div>
+  <p class="kicker">KUGA INC. — GET IN TOUCH</p>
+  <h1><span class="line"><span>Contact <span class="it">us.</span></span></span></h1>
+  <p class="lede">お仕事のご相談・お見積り・取材のご依頼など、下記フォームからお気軽にどうぞ。2営業日以内にご返信します。</p>
+</header>
+
+<section style="padding-top:4vh">
+  <form class="form-wrap rv" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-row">
+      <label for="f-name">NAME — お名前<span class="req">必須</span></label>
+      <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="山田 花子">
+    </div>
+    <div class="form-row">
+      <label for="f-email">EMAIL — メールアドレス<span class="req">必須</span></label>
+      <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="you@example.com">
+    </div>
+    <div class="form-row">
+      <label for="f-topic">TOPIC — ご用件</label>
+      <select id="f-topic" name="topic">
+        <option value="web">Webサイト制作のご相談</option>
+        <option value="netdelink">ネットでLINKについて</option>
+        <option value="dancemap">全国ダンスマップについて</option>
+        <option value="press">取材・プレス関連</option>
+        <option value="other">その他</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="f-message">MESSAGE — メッセージ<span class="req">必須</span></label>
+      <textarea id="f-message" name="message" required placeholder="ご相談内容をご記入ください"></textarea>
+    </div>
+    <button class="form-submit" type="submit">送信する<i class="fa-solid fa-arrow-right"></i></button>
+    <p class="form-note">フォームがうまく動かない場合は <a href="mailto:usamimihitomi33@gmail.com" style="color:var(--accent-deep)">usamimihitomi33@gmail.com</a> まで直接ご連絡ください。</p>
+  </form>
+</section>
+
+<section class="contact compact" id="contact">
+  <div class="orb"></div>
+  <div class="wm" aria-hidden="true"><img src="assets/img/kuga.png" alt=""></div>
+  <div class="rv">
+    <p class="small">OR — メールでも</p>
+    <h2><a href="mailto:usamimihitomi33@gmail.com">Let's make<br>something <span class="it">good.</span></a></h2>
+    <p class="sub">メールでのご連絡もお気軽にどうぞ。</p>
+  </div>
+  <footer>
+    <div class="f-brand"><img src="assets/img/kuga.png" alt="くうが株式会社 ロゴ"><span>&copy; 2026 KUGA Inc. All rights reserved.</span></div>
+    <div class="f-nav">
+      <a href="works.html">WORKS</a>
+      <a href="press.html">PRESS</a>
+      <a href="en/contact.html">ENGLISH</a>
+    </div>
+    <div class="sns">
+      <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="note"><i class="fa-solid fa-pen-nib"></i></a>
+    </div>
+  </footer>
+</section>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
