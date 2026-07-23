@@ -249,7 +249,7 @@ html[lang="en"] .about-grid .body{letter-spacing:.01em;max-width:52ch}
 }
 .svc:hover::before{opacity:1}
 .svc>*{transition:transform .5s var(--ease);will-change:transform}
-.svc:hover>*{transform:translateX(14px)}
+.svc:hover>*{transform:translateX(28px)}
 .svc .s-logo{
   width:96px;height:96px;border-radius:24px;flex-shrink:0;align-self:start;
   background:#fff;border:1px solid var(--line);overflow:hidden;
@@ -258,7 +258,7 @@ html[lang="en"] .about-grid .body{letter-spacing:.01em;max-width:52ch}
   transition:transform .5s var(--ease),box-shadow .5s var(--ease);
 }
 .svc .s-logo img{width:100%;height:100%;object-fit:contain}
-.svc:hover .s-logo{transform:translateX(14px) translateY(-4px) rotate(-2deg);box-shadow:0 14px 30px rgba(69,59,56,.12)}
+.svc:hover .s-logo{transform:translateX(28px) translateY(-4px) rotate(-2deg);box-shadow:0 14px 30px rgba(69,59,56,.12)}
 .svc .meta{
   display:flex;align-items:center;gap:18px;margin-bottom:14px;
   font-size:11px;letter-spacing:.22em;color:var(--muted);font-weight:400;flex-wrap:wrap;
@@ -285,7 +285,7 @@ html[lang="en"] .svc p{letter-spacing:.01em}
 }
 .svc:hover .arrow{
   background:var(--accent);border-color:var(--accent);color:#fff;
-  transform:translateX(14px) rotate(-45deg) scale(1.08);
+  transform:translateX(28px) rotate(-45deg) scale(1.08);
   box-shadow:0 12px 28px rgba(69,59,56,.3);
 }
 @media(max-width:640px){
