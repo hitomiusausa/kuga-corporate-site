@@ -451,6 +451,10 @@ html[lang="en"] .work p{letter-spacing:.01em}
 .work .w-num .n{font-family:var(--serif);font-size:34px;line-height:1}
 .work .w-num .u{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-deep)}
 .work .w-num .d{font-size:10.5px;letter-spacing:.16em;color:var(--muted);margin-left:auto;font-weight:400;text-align:right}
+@media(max-width:640px){
+  .w-img{aspect-ratio:2/1;border-radius:12px;margin-bottom:18px}
+  .work{padding:26px 22px 24px}
+}
 
 /* ======= Review ======= */
 .review{margin-top:12vh;max-width:760px}
