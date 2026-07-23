@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | KUGA Inc.</title>
+<meta name="description" content="Contact KUGA Inc. — projects, estimates, and press inquiries welcome.">
+<link rel="alternate" hreflang="ja" href="https://kugainc.com/contact.html">
+<link rel="alternate" hreflang="en" href="https://kugainc.com/en/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://kugainc.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@200;300;400;500;600&family=Noto+Sans+JP:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><img src="../assets/img/kuga.png" alt="KUGA Inc. logo">KUGA<span class="dot">.</span></a>
+  <ul>
+    <li><a href="index.html#about">ABOUT</a></li>
+    <li><a href="index.html#services">SERVICES</a></li>
+    <li><a href="works.html">WORKS</a></li>
+    <li><a href="press.html">PRESS</a></li>
+    <li><a class="active" href="contact.html">CONTACT</a></li>
+  </ul>
+  <div class="lang"><a href="../contact.html">JP</a><span class="sep">/</span><a class="cur" href="contact.html" aria-current="true">EN</a></div>
+  <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+</nav>
+<div class="m-menu">
+  <a class="mm-link" href="index.html#about"><span class="idx">01</span>About</a>
+  <a class="mm-link" href="index.html#services"><span class="idx">02</span>Services</a>
+  <a class="mm-link" href="works.html"><span class="idx">03</span>Works</a>
+  <a class="mm-link" href="press.html"><span class="idx">04</span>Press</a>
+  <a class="mm-link" href="contact.html"><span class="idx">05</span>Contact</a>
+  <div class="mm-lang"><a href="../contact.html">JAPANESE</a><a class="cur" href="contact.html">ENGLISH</a></div>
+</div>
+
+<header class="page-hero">
+  <div class="orb a" data-p="0.05"></div>
+  <p class="kicker">KUGA INC. — GET IN TOUCH</p>
+  <h1><span class="line"><span>Contact <span class="it">us.</span></span></span></h1>
+  <p class="lede">Projects, estimates, press — we'd love to hear from you. We reply within two business days.</p>
+</header>
+
+<section style="padding-top:4vh">
+  <form class="form-wrap rv" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-row">
+      <label for="f-name">NAME<span class="req">REQUIRED</span></label>
+      <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="Jane Smith">
+    </div>
+    <div class="form-row">
+      <label for="f-email">EMAIL<span class="req">REQUIRED</span></label>
+      <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="you@example.com">
+    </div>
+    <div class="form-row">
+      <label for="f-topic">TOPIC</label>
+      <select id="f-topic" name="topic">
+        <option value="web">Website production</option>
+        <option value="netdelink">About NETDELINK</option>
+        <option value="dancemap">About Dance Map Japan</option>
+        <option value="press">Press &amp; media</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="f-message">MESSAGE<span class="req">REQUIRED</span></label>
+      <textarea id="f-message" name="message" required placeholder="Tell us about your project"></textarea>
+    </div>
+    <button class="form-submit" type="submit">SEND<i class="fa-solid fa-arrow-right"></i></button>
+    <p class="form-note">If the form doesn't work, email us directly at <a href="mailto:usamimihitomi33@gmail.com" style="color:var(--accent-deep)">usamimihitomi33@gmail.com</a>.</p>
+  </form>
+</section>
+
+<section class="contact compact" id="contact">
+  <div class="orb"></div>
+  <div class="wm" aria-hidden="true"><img src="../assets/img/kuga.png" alt=""></div>
+  <div class="rv">
+    <p class="small">OR — BY EMAIL</p>
+    <h2><a href="mailto:usamimihitomi33@gmail.com">Let's make<br>something <span class="it">good.</span></a></h2>
+    <p class="sub">Email works too — we read everything.</p>
+  </div>
+  <footer>
+    <div class="f-brand"><img src="../assets/img/kuga.png" alt="KUGA Inc. logo"><span>&copy; 2026 KUGA Inc. All rights reserved.</span></div>
+    <div class="f-nav">
+      <a href="works.html">WORKS</a>
+      <a href="press.html">PRESS</a>
+      <a href="../contact.html">日本語</a>
+    </div>
+    <div class="sns">
+      <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="note"><i class="fa-solid fa-pen-nib"></i></a>
+    </div>
+  </footer>
+</section>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
