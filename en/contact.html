@@ -71,6 +71,47 @@
     <button class="form-submit" type="submit">SEND<i class="fa-solid fa-arrow-right"></i></button>
     <p class="form-note">If the form doesn't work, email us directly at <a href="mailto:usamimihitomi33@gmail.com" style="color:var(--accent-deep)">usamimihitomi33@gmail.com</a>.</p>
   </form>
+
+  <div class="form-done" hidden>
+    <p class="fd-kicker">MESSAGE SENT</p>
+    <h2 class="fd-title">Thank <span class="it">you.</span></h2>
+    <p class="fd-body">Thank you for reaching out.<br>We'll review your message and get back to you <strong>within two business days</strong>.</p>
+    <a class="fd-back" href="index.html">Back to top<i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+
+  <style>
+  .form-done{max-width:640px;margin:0 auto;padding:10vh 0 6vh;text-align:center;animation:fadeUp .9s var(--ease) both}
+  .form-done .fd-kicker{font-size:11px;letter-spacing:.32em;color:var(--muted);margin-bottom:2.5vh}
+  .form-done .fd-title{font-family:var(--serif);font-weight:400;font-size:clamp(48px,8vw,96px);line-height:1.05;margin-bottom:3vh}
+  .form-done .fd-title .it{font-style:italic;color:var(--accent-deep)}
+  .form-done .fd-body{color:var(--ink-soft);font-size:14.5px;letter-spacing:.08em;line-height:2.1;margin-bottom:4.5vh}
+  .form-done .fd-back{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.22em;color:var(--accent-deep);border:1px solid rgba(226,132,153,.45);border-radius:99px;padding:14px 30px;transition:all .4s var(--ease)}
+  .form-done .fd-back:hover{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 12px 28px rgba(226,132,153,.35)}
+  .form-wrap.sending .form-submit{opacity:.5;pointer-events:none}
+  </style>
+
+  <script>
+  (function(){
+    const form=document.querySelector('.form-wrap');
+    const done=document.querySelector('.form-done');
+    if(!form||!done)return;
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      form.classList.add('sending');
+      try{
+        const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(res.ok){
+          form.hidden=true;done.hidden=false;
+          done.scrollIntoView({behavior:'smooth',block:'center'});
+        }else{throw new Error();}
+      }catch(_){
+        form.classList.remove('sending');
+        const note=form.querySelector('.form-note');
+        if(note){note.innerHTML='<strong style="color:var(--accent-deep)">Sending failed.</strong> Please email us directly. '+note.innerHTML;}
+      }
+    });
+  })();
+  </script>
 </section>
 
 <section class="contact compact" id="contact">
