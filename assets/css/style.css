@@ -331,6 +331,19 @@ html[lang="en"] .svc p{letter-spacing:.01em}
 .w-img{aspect-ratio:16/10;border-radius:16px;overflow:hidden;margin-bottom:26px}
 .w-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
 .work:hover .w-img img{transform:scale(1.045)}
+a.w-img{display:block}
+.work .w-cta{
+  align-self:flex-start;margin-top:22px;
+  display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-size:11px;letter-spacing:.14em;font-weight:400;color:var(--ink);
+  border:1px solid var(--line);border-radius:99px;padding:10px 20px;
+  transition:background .4s var(--ease),border-color .4s var(--ease),color .4s var(--ease),transform .4s var(--ease);
+}
+.work .w-cta .w-dom{font-family:var(--serif);font-style:italic;letter-spacing:.04em;color:var(--muted);font-size:12px}
+.work .w-cta i{font-size:10px;color:var(--accent-deep)}
+.work .w-cta:hover{background:var(--ink);border-color:var(--ink);color:var(--paper);transform:translateX(4px)}
+.work .w-cta:hover .w-dom,.work .w-cta:hover i{color:var(--accent)}
+.work .w-cta:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px}
 .p-thumb{aspect-ratio:16/10;border-radius:14px;overflow:hidden;align-self:center}
 .p-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
 .press-item:hover .p-thumb img{transform:scale(1.05)}
