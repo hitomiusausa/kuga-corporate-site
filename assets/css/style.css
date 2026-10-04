@@ -644,3 +644,11 @@ footer .sns a:hover{opacity:1;color:var(--accent);transform:translateY(-2px)}
   .contact.compact{padding-top:72px}
   footer{padding-top:56px}
 }
+
+/* タッチ端末ではホバー演出（右へずれる・背景色）を出さない。タップ後にホバー状態が残って右寄りに見えるのを防ぐ */
+@media (hover:none){
+  .svc:hover>*,.svc:hover .s-logo,.svc:hover .arrow{transform:none}
+  .svc:hover::before{opacity:0}
+  .work:hover{transform:none;box-shadow:none}
+  .work:hover .w-img img{transform:none}
+}
