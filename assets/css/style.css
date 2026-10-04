@@ -618,3 +618,29 @@ footer .sns a:hover{opacity:1;color:var(--accent);transform:translateY(-2px)}
   .rv{opacity:1;transform:none}
   .wr .w{opacity:1}
 }
+
+/* ======= Mobile spacing (2026-10-04) =======
+   PCは画面の高さ(vh)基準の余白でゆったり。スマホでは縦に長く間延びするため、固定値で詰める */
+@media(max-width:640px){
+  section{padding:72px 6vw}
+  .sec-head{margin-bottom:36px;gap:14px;flex-wrap:wrap}
+  .hero{min-height:auto;padding:128px 6vw 64px}
+  .hero h1{font-size:min(12.4vw,52px)}
+  .hero .copy{margin-top:28px}
+  .hero .scroll{position:static;margin-top:44px}
+  .page-hero{padding:120px 6vw 40px}
+  .page-hero .lede{margin-top:22px}
+  .about-grid{gap:28px}
+  .about-grid .body{padding-top:0}
+  .svc{grid-template-columns:minmax(0,1fr);gap:16px;padding:32px 0}
+  .svc .s-logo{width:52px;height:52px;border-radius:14px}
+  .svc .meta{margin-bottom:10px;gap:12px}
+  .stats{margin-top:48px}
+  .review{margin-top:56px}
+  .article{padding:120px 6vw 72px}
+  .a-related{margin-top:56px}
+  .form-row{margin-bottom:24px}
+  .contact{padding-top:88px}
+  .contact.compact{padding-top:72px}
+  footer{padding-top:56px}
+}
