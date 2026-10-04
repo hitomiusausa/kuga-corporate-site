@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kugainc.com/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/ai.html</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://kugainc.com/works.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/works.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/works.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/works.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/tools.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/tools.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/tools.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/tools.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/tools.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/tools.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/press.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/press.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/contact.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/press/netdelink-launch.html</loc>
+  </url>
+  <url>
+    <loc>https://kugainc.com/press/kanji-my-name-launch.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/kanji-my-name-launch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/kanji-my-name-launch.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/press/kanji-my-name-launch.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/kanji-my-name-launch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/kanji-my-name-launch.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/press/sunrich-website.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/sunrich-website.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/sunrich-website.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/press/sunrich-website.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/sunrich-website.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/sunrich-website.html"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/press/dancemap-500.html</loc>
+  </url>
+</urlset>
