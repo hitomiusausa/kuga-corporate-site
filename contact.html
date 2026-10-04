@@ -64,6 +64,7 @@
       <label for="f-topic">TOPIC — ご用件</label>
       <select id="f-topic" name="topic">
         <option value="web">Webサイト制作のご相談</option>
+        <option value="ai">AI導入サポートのご相談（無料）</option>
         <option value="netdelink">ネットでLINKについて</option>
         <option value="dancemap">全国ダンスマップについて</option>
         <option value="press">取材・プレス関連</option>
@@ -101,6 +102,10 @@
     const form=document.querySelector('.form-wrap');
     const done=document.querySelector('.form-done');
     if(!form||!done)return;
+    /* ?topic=ai などで、ご用件を選んだ状態で開く */
+    const topic=new URLSearchParams(location.search).get('topic');
+    const sel=document.getElementById('f-topic');
+    if(topic&&sel&&sel.querySelector('option[value="'+topic.replace(/[^a-z]/g,'')+'"]'))sel.value=topic.replace(/[^a-z]/g,'');
     form.addEventListener('submit',async e=>{
       e.preventDefault();
       form.classList.add('sending');

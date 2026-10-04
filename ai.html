@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI活用サポート｜中小企業のAI導入を伴走支援 | くうが株式会社</title>
+<meta name="description" content="「AIを何に使えばいいかわからない」からで大丈夫。くうが株式会社は、事務の効率化や問い合わせ対応の自動化など、中小企業のAI導入を一緒に手を動かしてサポートします。無料相談（30分・オンライン）受付中。">
+<link rel="canonical" href="https://kugainc.com/ai.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@200;300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* ページ固有: AI活用サポート */
+  .ai-sec{padding-top:6vh}
+  .ai-sec .sec-head{flex-wrap:wrap;row-gap:8px}
+
+  /* こんなご相談 */
+  .welcome{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:6vw;align-items:start}
+  .welcome .big{font-size:clamp(22px,2.8vw,34px);font-weight:200;line-height:1.85;letter-spacing:.06em}
+  .welcome .big em{font-style:normal;font-weight:400;background:linear-gradient(transparent 68%,rgba(226,132,153,.28) 68%)}
+  .welcome .big + p{margin-top:3vh;color:var(--ink-soft);font-size:14.5px;letter-spacing:.06em;line-height:2.1}
+  .worries{list-style:none;display:grid;gap:12px}
+  .worries li{
+    border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.5);
+    padding:14px 24px;font-size:14px;letter-spacing:.05em;color:var(--ink);
+    display:flex;align-items:center;gap:14px;
+  }
+  .worries li i{color:var(--accent-deep);font-size:13px}
+  @media(max-width:820px){.welcome{grid-template-columns:1fr;gap:6vh}.worries li{border-radius:18px}}
+
+  /* できること */
+  .can-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+  .can{
+    border:1px solid var(--line);border-radius:24px;padding:34px 30px 30px;
+    background:rgba(255,255,255,.35);display:flex;flex-direction:column;gap:12px;
+  }
+  .can .c-ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    background:#fff;border:1px solid var(--line);color:var(--accent-deep);font-size:18px}
+  .can h3{font-size:clamp(20px,2.2vw,24px);font-weight:400;letter-spacing:.04em;line-height:1.5}
+  .can p{color:var(--ink-soft);font-size:13.5px;letter-spacing:.04em;line-height:2}
+  .can .proof{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+  .can .proof b{font-weight:400;color:var(--accent-deep)}
+
+  /* 進め方 */
+  .flow{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:step}
+  .flow li{position:relative;padding:28px 24px 26px;border-top:1px solid var(--ink);counter-increment:step}
+  .flow li::before{content:"0" counter(step);font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent-deep);display:block;margin-bottom:14px}
+  .flow h3{font-size:18px;font-weight:400;letter-spacing:.05em;margin-bottom:8px}
+  .flow p{font-size:13.5px;color:var(--ink-soft);letter-spacing:.04em;line-height:2}
+  @media(max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:560px){.flow{grid-template-columns:1fr}}
+
+  /* 料金の目安 */
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .plan{background:var(--paper);padding:30px 26px;display:flex;flex-direction:column;gap:10px}
+  .plan h3{font-size:18px;font-weight:400;letter-spacing:.05em}
+  .plan .p-name{font-size:12px;letter-spacing:.22em;color:var(--muted)}
+  .plan .p-price{font-family:var(--serif);font-size:clamp(28px,3vw,36px);line-height:1.1;font-variant-numeric:tabular-nums}
+  .plan .p-price small{font-family:var(--sans);font-size:13px;margin-left:4px;color:var(--ink-soft)}
+  .plan p{font-size:13px;color:var(--ink-soft);letter-spacing:.04em;line-height:1.95}
+  .plan.free .p-price{color:var(--accent-deep)}
+  .plans-note{margin-top:2.4vh;font-size:12px;color:var(--muted);letter-spacing:.06em}
+
+  /* 安心のために */
+  .safe{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:6vw;align-items:start;
+    background:linear-gradient(140deg,rgba(226,132,153,.06),rgba(238,196,168,.1));border-radius:28px;padding:7vh 5vw}
+  .safe h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,48px);line-height:1.2}
+  .safe .lead{margin-top:3vh;color:var(--ink-soft);font-size:14.5px;letter-spacing:.05em;line-height:2.1}
+  .safe ul{list-style:none;display:grid;gap:18px}
+  .safe li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start}
+  .safe li i{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);font-size:15px}
+  .safe li b{display:block;font-weight:400;font-size:15.5px;letter-spacing:.05em;margin-bottom:4px}
+  .safe li span{font-size:13.5px;color:var(--ink-soft);letter-spacing:.04em;line-height:1.95}
+  .safe .ex{font-size:12px;letter-spacing:.2em;color:var(--muted);margin-bottom:2vh}
+  @media(max-width:820px){.safe{grid-template-columns:1fr;gap:5vh;padding:6vh 6vw}}
+
+  /* 相談ボタン */
+  .cta-row{margin-top:8vh;display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px}
+  .cta-btn{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.16em;font-weight:400;
+    background:var(--ink);color:var(--paper);border-radius:99px;padding:16px 32px;transition:background .4s var(--ease),transform .4s var(--ease)}
+  .cta-btn i{color:var(--accent)}
+  .cta-btn:hover{background:var(--accent-deep);transform:translateX(4px)}
+  .cta-btn:hover i{color:#fff}
+  .cta-btn:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px}
+  .cta-row .note{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><img src="assets/img/kuga.png" alt="くうが株式会社 ロゴ">KUGA<span class="dot">.</span></a>
+  <ul>
+    <li><a href="index.html#about">ABOUT</a></li>
+    <li><a class="active" href="index.html#services">SERVICES</a></li>
+    <li><a href="works.html">WORKS</a></li>
+    <li><a href="tools.html">TOOLS</a></li>
+    <li><a href="press.html">PRESS</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+  <div class="lang"><a class="cur" href="ai.html" aria-current="true">JP</a><span class="sep">/</span><a href="en/index.html">EN</a></div>
+  <button class="menu-btn" aria-label="メニュー" aria-expanded="false"><span></span><span></span></button>
+</nav>
+<div class="m-menu">
+  <a class="mm-link" href="index.html#about"><span class="idx">01</span>About</a>
+  <a class="mm-link" href="index.html#services"><span class="idx">02</span>Services</a>
+  <a class="mm-link" href="works.html"><span class="idx">03</span>Works</a>
+  <a class="mm-link" href="tools.html"><span class="idx">04</span>Tools</a>
+  <a class="mm-link" href="press.html"><span class="idx">05</span>Press</a>
+  <a class="mm-link" href="contact.html"><span class="idx">06</span>Contact</a>
+  <div class="mm-lang"><a class="cur" href="ai.html">JAPANESE</a><a href="en/index.html">ENGLISH</a></div>
+</div>
+
+<header class="page-hero">
+  <div class="orb a" data-p="0.05"></div>
+  <p class="kicker">KUGA INC. — AI ADOPTION SUPPORT</p>
+  <h1><span class="line"><span>AI, <span class="it">by your side.</span></span></span></h1>
+  <p class="lede">AI活用サポート。「AIを使ってみたいけれど、何から始めればいいかわからない」。そんな段階からで大丈夫です。くうが株式会社は、自社でもAIを使ってサービスを開発・運用しているチーム。相談だけで終わらせず、実際の業務で使えるところまで、一緒に手を動かしてお手伝いします。</p>
+</header>
+
+<section class="ai-sec">
+  <div class="sec-head rv">
+    <span class="num">01</span><h2>Welcome</h2><span class="jp">ご相談歓迎</span>
+  </div>
+  <div class="welcome">
+    <div class="rv">
+      <p class="big">どう活用できるのか<br><em>わからない</em>、<br>というご相談でも大丈夫。</p>
+      <p>お仕事の様子やお困りごとを伺いながら、AIで楽になりそうなところを一緒に探します。まずはお気軽にご相談ください。</p>
+    </div>
+    <ul class="worries rv rv-d1">
+      <li><i class="fa-regular fa-comment"></i>AIで何ができるのか、まだよくわからない</li>
+      <li><i class="fa-regular fa-comment"></i>ChatGPTなどを契約したけれど、使いこなせていない</li>
+      <li><i class="fa-regular fa-comment"></i>見積書や書類づくり、事務作業を減らしたい</li>
+      <li><i class="fa-regular fa-comment"></i>問い合わせや申込の対応を、自動で回したい</li>
+      <li><i class="fa-regular fa-comment"></i>外国人のお客さま・スタッフへの対応に困っている</li>
+      <li><i class="fa-regular fa-comment"></i>社内でAIを使うときのルールを決めたい</li>
+    </ul>
+  </div>
+</section>
+
+<section class="ai-sec">
+  <div class="sec-head rv">
+    <span class="num">02</span><h2>What we do</h2><span class="jp">お手伝いできること</span>
+  </div>
+  <div class="can-grid">
+    <div class="can rv">
+      <div class="c-ic"><i class="fa-regular fa-file-lines"></i></div>
+      <h3>書類・事務の効率化</h3>
+      <p>見積書や請求書、議事録、経理や決算の準備など、毎日・毎月くり返す作業をAIで短くします。</p>
+      <div class="proof"><b>実績</b>　自社の経理・決算準備をAIと運用</div>
+    </div>
+    <div class="can rv rv-d1">
+      <div class="c-ic"><i class="fa-regular fa-envelope"></i></div>
+      <h3>問い合わせ・申込の自動化</h3>
+      <p>フォームの内容を一覧に記録し、担当者への通知やお客さまへの自動返信まで。転記と連絡漏れをなくします。</p>
+      <div class="proof"><b>実績</b>　全国ダンスマップのイベント投稿受付</div>
+    </div>
+    <div class="can rv rv-d2">
+      <div class="c-ic"><i class="fa-regular fa-newspaper"></i></div>
+      <h3>情報収集の自動化</h3>
+      <p>業界ニュースや補助金・公募の情報を毎朝自動で集め、読みやすいレポートにまとめます。</p>
+      <div class="proof"><b>実績</b>　日本語教育の補助金・政策ニュースを毎朝収集</div>
+    </div>
+    <div class="can rv">
+      <div class="c-ic"><i class="fa-regular fa-pen-to-square"></i></div>
+      <h3>発信のサポート</h3>
+      <p>SNS投稿や口コミへの返信、商品説明の下書きを、お店や会社らしい言葉づかいで作れる「型」を整えます。</p>
+      <div class="proof"><b>実績</b>　ニュース収集からSNS投稿の下書きまでの半自動ツール</div>
+    </div>
+    <div class="can rv rv-d1">
+      <div class="c-ic"><i class="fa-solid fa-language"></i></div>
+      <h3>外国語対応</h3>
+      <p>多言語のWebページや案内文、外国人スタッフ向けのマニュアルを、用語をそろえて作ります。</p>
+      <div class="proof"><b>実績</b>　<a href="https://netdelink.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">ネットでLINK</a>（日本語＋外国語12言語）</div>
+    </div>
+    <div class="can rv rv-d2">
+      <div class="c-ic"><i class="fa-regular fa-handshake"></i></div>
+      <h3>社内のAIルールづくり</h3>
+      <p>どの情報をAIに入れてよいか、どう使えば同じ品質で回るか。社内で使い続けるための決まりごとを一緒に作ります。</p>
+      <div class="proof"><b>実績</b>　自社の全プロジェクトで運用しているAI作業ルール</div>
+    </div>
+  </div>
+</section>
+
+<section class="ai-sec">
+  <div class="sec-head rv">
+    <span class="num">03</span><h2>Flow</h2><span class="jp">ご相談からの流れ</span>
+  </div>
+  <ol class="flow rv">
+    <li><h3>無料相談</h3><p>オンラインで30分。お困りごとを伺い、AIでできそうなことをその場でひとつお見せします。</p></li>
+    <li><h3>ご提案・お見積もり</h3><p>どの作業から始めるか、扱う情報のルールも含めてご提案します。</p></li>
+    <li><h3>導入・構築</h3><p>設定や仕組みづくりは、一緒に手を動かしながら進めます。使い方のご説明も含みます。</p></li>
+    <li><h3>定着のサポート</h3><p>使い始めてからの疑問や、ちょっとした修正にも対応します。</p></li>
+  </ol>
+</section>
+
+<section class="ai-sec">
+  <div class="sec-head rv">
+    <span class="num">04</span><h2>Plans</h2><span class="jp">料金の目安</span>
+  </div>
+  <div class="plans rv">
+    <div class="plan free"><span class="p-name">FREE CONSULTATION</span><h3>無料相談</h3><div class="p-price">0<small>円</small></div><p>オンライン30分。月5社さままで。</p></div>
+    <div class="plan"><span class="p-name">SPOT</span><h3>スポット導入</h3><div class="p-price">5万<small>円〜</small></div><p>ひとつの作業を、AIで回る状態にします。事前のヒアリング＋当日3時間程度。</p></div>
+    <div class="plan"><span class="p-name">AUTOMATION</span><h3>自動化づくり</h3><div class="p-price">15万<small>円〜</small></div><p>業務の流れに合わせた仕組みを作ってお渡しします。内容を書面で確認してから進めます。</p></div>
+    <div class="plan"><span class="p-name">MONTHLY</span><h3>月額サポート</h3><div class="p-price">5万<small>円／月〜</small></div><p>月1回の打ち合わせ、チャットでのご質問、小さな修正。使い続けるための伴走です。</p></div>
+  </div>
+  <p class="plans-note">※ 表示はすべて税別です。内容に合わせてお見積もりします。</p>
+</section>
+
+<section class="ai-sec">
+  <div class="safe rv">
+    <div>
+      <h2>Safe <span class="it">from the start.</span></h2>
+      <p class="lead">「AIは使ってみたいけれど、情報の扱いが心配」という方も多いと思います。扱う情報やご支援の内容は、お客さまごとに異なります。くうがでは導入の前に、どの情報をAIに入力してよいか、どのツールを使うかを一緒に整理し、お客さまに合ったルールを決めてからご支援を始めます。</p>
+    </div>
+    <div>
+      <p class="ex">たとえば、こんなことを最初に決めます</p>
+      <ul>
+        <li><i class="fa-solid fa-user-shield"></i><div><b>個人情報・社内情報の扱い</b><span>お客さまの個人情報や社内の資料を、AIに入力してよいか、どこまでならよいかを決めます。</span></div></li>
+        <li><i class="fa-regular fa-circle-check"></i><div><b>送信・投稿の前に、人が確認する</b><span>AIが作った文章やメールは、必ず人が確認してから送る流れにします。勝手に送信・投稿される仕組みは作りません。</span></div></li>
+        <li><i class="fa-solid fa-laptop"></i><div><b>データを外に出さない方法も選べます</b><span>写真の加工などは、データを外部に送らずパソコンの中だけで処理できるツールもご用意しています。</span></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cta-row rv">
+    <a class="cta-btn" href="contact.html?topic=ai">AI導入サポートのご相談（無料）<i class="fa-solid fa-arrow-right"></i></a>
+    <span class="note">名古屋・愛知を中心に、オンラインで全国対応しています。</span>
+  </div>
+</section>
+
+<section class="contact compact" id="contact">
+  <div class="orb"></div>
+  <div class="wm" aria-hidden="true"><img src="assets/img/kuga.png" alt=""></div>
+  <div class="rv">
+    <p class="small">CONTACT — お問い合わせ</p>
+    <h2><a href="contact.html?topic=ai">Let's make<br>something <span class="it">good.</span></a></h2>
+    <p class="sub">「こんなことにAIは使える？」というご質問だけでも、お気軽にどうぞ。</p>
+  </div>
+  <footer>
+    <div class="f-brand"><img src="assets/img/kuga.png" alt="くうが株式会社 ロゴ"><span>&copy; 2026 KUGA Inc. All rights reserved.</span></div>
+    <div class="f-nav">
+      <a href="works.html">WORKS</a>
+      <a href="tools.html">TOOLS</a>
+      <a href="press.html">PRESS</a>
+      <a href="en/index.html">ENGLISH</a>
+    </div>
+    <div class="sns">
+      <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="note"><i class="fa-solid fa-pen-nib"></i></a>
+    </div>
+  </footer>
+</section>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
