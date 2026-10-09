@@ -76,14 +76,50 @@
     update();
   });
 
-  /* Mobile menu */
+  /* Mobile menu: keyboard access, state and background scroll */
   var btn = document.querySelector('.menu-btn');
-  if(btn){
+  var menu = document.querySelector('.m-menu');
+  if(btn && menu){
+    menu.id = 'mobile-menu';
+    menu.inert = true;
+    menu.setAttribute('aria-hidden', 'true');
+    btn.setAttribute('aria-controls', menu.id);
+    var background = [];
+    function setMenu(open, restoreFocus){
+      document.body.classList.toggle('menu-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-hidden', String(!open));
+      menu.inert = !open;
+      if(open){
+        background = Array.prototype.slice.call(document.body.children).filter(function(el){
+          return el !== menu && el !== btn.closest('nav') && el.tagName !== 'SCRIPT' && el.tagName !== 'STYLE';
+        }).map(function(el){ var item = {el:el, inert:el.inert}; el.inert = true; return item; });
+        var first = menu.querySelector('a');
+        if(first) first.focus();
+      }else{
+        background.forEach(function(item){ item.el.inert = item.inert; });
+        background = [];
+        if(restoreFocus) btn.focus();
+      }
+    }
     btn.addEventListener('click', function(){
-      document.body.classList.toggle('menu-open');
+      setMenu(!document.body.classList.contains('menu-open'), true);
     });
-    document.querySelectorAll('.m-menu a').forEach(function(a){
-      a.addEventListener('click', function(){ document.body.classList.remove('menu-open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setMenu(false, true); });
+    });
+    document.addEventListener('keydown', function(e){
+      if(!document.body.classList.contains('menu-open')) return;
+      if(e.key === 'Escape'){ e.preventDefault(); setMenu(false, true); }
+      if(e.key === 'Tab'){
+        var items = [btn].concat(Array.prototype.slice.call(menu.querySelectorAll('a[href]')));
+        var index = items.indexOf(document.activeElement);
+        e.preventDefault();
+        items[(index + (e.shiftKey ? -1 : 1) + items.length) % items.length].focus();
+      }
+    });
+    matchMedia('(max-width:760px)').addEventListener('change', function(e){
+      if(!e.matches && document.body.classList.contains('menu-open')) setMenu(false, false);
     });
   }
 })();

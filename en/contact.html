@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@200;300;400;500;600&family=Noto+Sans+JP:wght@200;300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261004c">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261009a">
 </head>
 <body>
 
@@ -75,10 +75,11 @@
       <textarea id="f-message" name="message" required placeholder="Tell us about your project"></textarea>
     </div>
     <button class="form-submit" type="submit">SEND<i class="fa-solid fa-arrow-right"></i></button>
-    <p class="form-note">If the form doesn't work, email us directly at <a href="mailto:usamimihitomi33@gmail.com" style="color:var(--accent-deep)">usamimihitomi33@gmail.com</a>.</p>
+    <p class="form-error form-note" role="alert" aria-live="assertive"></p>
+    <p class="form-note">If the form doesn't work, email us directly at <a href="mailto:info@kugainc.com" style="color:var(--accent-deep)">info@kugainc.com</a>.</p>
   </form>
 
-  <div class="form-done" hidden>
+  <div class="form-done" tabindex="-1" hidden>
     <p class="fd-kicker">MESSAGE SENT</p>
     <h2 class="fd-title">Thank <span class="it">you.</span></h2>
     <p class="fd-body">Thank you for reaching out.<br>We'll review your message and get back to you <strong>within two business days</strong>.</p>
@@ -101,19 +102,30 @@
     const form=document.querySelector('.form-wrap');
     const done=document.querySelector('.form-done');
     if(!form||!done)return;
+    const button=form.querySelector('.form-submit');
+    const error=form.querySelector('.form-error');
+    let sending=false;
     form.addEventListener('submit',async e=>{
       e.preventDefault();
+      if(sending)return;
+      sending=true;
+      button.disabled=true;
+      error.textContent='';
+      form.setAttribute('aria-busy','true');
       form.classList.add('sending');
       try{
         const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-        if(res.ok){
-          form.hidden=true;done.hidden=false;
-          done.scrollIntoView({behavior:'smooth',block:'center'});
-        }else{throw new Error();}
+        if(!res.ok)throw new Error();
+        form.hidden=true;done.hidden=false;
+        done.focus({preventScroll:true});
+        done.scrollIntoView({behavior:'smooth',block:'center'});
       }catch(_){
+        error.textContent='Sending failed. Please email us directly at info@kugainc.com.';
+      }finally{
+        sending=false;
+        button.disabled=false;
+        form.removeAttribute('aria-busy');
         form.classList.remove('sending');
-        const note=form.querySelector('.form-note');
-        if(note){note.innerHTML='<strong style="color:var(--accent-deep)">Sending failed.</strong> Please email us directly. '+note.innerHTML;}
       }
     });
   })();
@@ -125,7 +137,7 @@
   <div class="wm" aria-hidden="true"><img src="../assets/img/kuga.png" alt=""></div>
   <div class="rv">
     <p class="small">OR — BY EMAIL</p>
-    <h2><a href="mailto:usamimihitomi33@gmail.com">Let's make<br>something <span class="it">good.</span></a></h2>
+    <h2><a href="mailto:info@kugainc.com">Let's make<br>something <span class="it">good.</span></a></h2>
     <p class="sub">Email works too — we read everything.</p>
   </div>
   <footer>
@@ -135,13 +147,9 @@
       <a href="press.html">PRESS</a>
       <a href="../contact.html">日本語</a>
     </div>
-    <div class="sns">
-      <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#" aria-label="note"><i class="fa-solid fa-pen-nib"></i></a>
-    </div>
   </footer>
 </section>
 
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js?v=20261009a"></script>
 </body>
 </html>
