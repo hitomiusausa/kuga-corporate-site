@@ -96,4 +96,16 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/usamimidsgn-renewal"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/usamimidsgn-renewal"/>
   </url>
+  <url>
+    <loc>https://kugainc.com/press-kit</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press-kit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press-kit"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/press-kit</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press-kit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press-kit"/>
+  </url>
 </urlset>
