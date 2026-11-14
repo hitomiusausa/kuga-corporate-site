@@ -108,4 +108,16 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press-kit"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press-kit"/>
   </url>
+  <url>
+    <loc>https://kugainc.com/press/uchikare-launch</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/uchikare-launch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/uchikare-launch"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/press/uchikare-launch</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/uchikare-launch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/uchikare-launch"/>
+  </url>
 </urlset>
