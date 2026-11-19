@@ -120,4 +120,16 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/uchikare-launch"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/uchikare-launch"/>
   </url>
+  <url>
+    <loc>https://kugainc.com/press/kanji-my-name-languages</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/kanji-my-name-languages"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/kanji-my-name-languages"/>
+  </url>
+  <url>
+    <loc>https://kugainc.com/en/press/kanji-my-name-languages</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kugainc.com/press/kanji-my-name-languages"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kugainc.com/en/press/kanji-my-name-languages"/>
+  </url>
 </urlset>
